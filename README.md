@@ -1,4 +1,5 @@
-LinkedIn Recruiter Enhanced Navigation - UserScript
+#LinkedIn Recruiter Enhanced Navigation - UserScript
+
 This UserScript enhances the navigation and interaction experience within LinkedIn Recruiter using keyboard shortcuts. It's a simple yet powerful tool for recruiters who spend a significant amount of time on LinkedIn and wish to streamline their workflow.
 
 Features
