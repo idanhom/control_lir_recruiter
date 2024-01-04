@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.3
 // @description  Use keyboard to navigate and interact with profiles in LinkedIn Recruiter
-// @author       YourName
+// @author       Oscar
 // @grant        none
 // @match        https://www.linkedin.com/talent/hire/*
 // ==/UserScript==
@@ -46,11 +46,16 @@
         }
     });
 
-    // Specific function to handle the hide button
+    // Specific function to toggle hide/unhide button
     function clickHideButton() {
         var hideButton = document.querySelector('button[data-live-test-component="hide-btn"]');
+        var unhideButton = document.querySelector('button[data-live-test-component="unhide-btn"]');
+
         if (hideButton) {
             hideButton.click();
+        } else if (unhideButton) {
+            unhideButton.click();
         }
     }
+
 })();
