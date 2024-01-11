@@ -1,50 +1,42 @@
 # LinkedIn Recruiter Enhanced Navigation
 
 ## Description
-
-This userscript enhances the user experience on LinkedIn Recruiter by enabling keyboard shortcuts for various navigation and interaction tasks within the application. It allows users to quickly navigate through profiles, interact with them, and manage their workflow more efficiently, all without the need to switch back and forth between the mouse and keyboard.
+This Tampermonkey script enhances the user experience on LinkedIn Recruiter by enabling keyboard navigation and interaction with profiles. It allows users to navigate between profiles, save profiles to a pipeline, hide/unhide profiles, send messages, and toggle the "See More/Less" option in profiles, as well as scroll up and down within a profile view, all using designated keyboard shortcuts.
 
 ## Features
-
-- **Profile Navigation**: Navigate forwards and backwards through LinkedIn Recruiter profiles.
-- **Save to Pipeline**: Quickly save profiles to your recruitment pipeline.
-- **Hide/Unhide Profiles**: Easily hide or unhide profiles as needed.
-- **Send Messages**: Initiate sending messages directly from the profile view.
-- **Scroll Profiles**: Scroll through the profile details both upwards and downwards.
-
-## Keyboard Shortcuts
-
-- **A**: Navigate to the previous profile.
-- **S**: Navigate to the next profile.
-- **D**: Save the currently viewed profile to the recruitment pipeline.
-- **F**: Toggle hiding/unhiding the currently viewed profile.
-- **Space**: Open the messaging window to send a message to the profile.
-- **V**: Scroll down within the profile view.
-- **C**: Scroll up within the profile view.
+- **Navigate between profiles** using the keyboard.
+- **Save profiles to your pipeline**.
+- **Hide or unhide profiles**.
+- **Send messages** directly from the profile view.
+- **Toggle "See More" and "See Less"** in profile descriptions.
+- **Scroll up and down** within the profile container.
 
 ## Installation
-
-1. Install a userscript manager like Tampermonkey or Greasemonkey in your web browser.
-2. Create a new userscript and paste the entire code of this script into the editor.
-3. Save the script and ensure it is enabled in your userscript manager.
-4. Navigate to LinkedIn Recruiter, and the script should automatically start working.
+1. Install Tampermonkey on your browser.
+2. Open Tampermonkey's dashboard and click on the 'Create a new script' button.
+3. Copy and paste the provided script into the script editor.
+4. Save the script and ensure it's enabled in the Tampermonkey dashboard.
 
 ## Usage
+Once installed, the script activates on the LinkedIn Recruiter pages. Use the following keyboard shortcuts for navigation:
 
-Simply use the keyboard shortcuts as outlined above while navigating LinkedIn Recruiter. Ensure the focus is not in an input field or editable text area when using the shortcuts.
+- `a` or `j`: Navigate to the previous profile.
+- `s` or `k`: Navigate to the next profile.
+- `d` or `l`: Save the current profile to the pipeline.
+- `f` or `ö`: Hide/Unhide the current profile.
+- `Spacebar`: Send a message.
+- `v` or `m`: Scroll down the profile.
+- `c` or `n`: Scroll up the profile.
+- `g` or `ä`: Toggle "See More" and "See Less" in the profile description.
 
 ## Compatibility
+This script is designed for use with LinkedIn Recruiter and has been tested with specific browser versions (e.g., Chrome 90, Firefox 88). Ensure your browser is compatible with Tampermonkey.
 
-This script is designed to work with the LinkedIn Recruiter interface (as of the last update of this README). Note that changes to LinkedIn's website design or functionality might affect the script's effectiveness.
+## Contribution
+Suggestions and contributions are welcome. Please feel free to fork, modify, and make pull requests or report issues.
+
+## License
+[Specify the license under which this script is released, e.g., MIT, GPL, etc.]
 
 ## Disclaimer
-
-This script is provided "as is", without warranty of any kind. The author is not affiliated with LinkedIn and this script is an independent enhancement tool.
-
-## Author
-
-Oscar
-
-## Version
-
-1.4
+This script is provided "as is", without warranty of any kind. Use at your own risk.
