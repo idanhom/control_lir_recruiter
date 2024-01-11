@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LinkedIn Recruiter Enhanced Navigation
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Use keyboard to navigate and interact with profiles in LinkedIn Recruiter
 // @author       Oscar
 // @grant        none
@@ -21,7 +21,7 @@
 
     // Function to scroll down the profile container by a fixed amount
     function scrollDownProfile() {
-        const scrollAmount = 500; // Amount of pixels to scroll down
+        const scrollAmount = 300; // Amount of pixels to scroll down
         const profileContainer = document.querySelector('#title-pagination-header-text > div > div.profile.profile-slidein__profile > div.profile__main-container');
         if (profileContainer) {
             profileContainer.scrollBy(0, scrollAmount);
@@ -30,7 +30,7 @@
 
     // Function to scroll up the profile container by a fixed amount
     function scrollUpProfile() {
-        const scrollAmount = 500; // Amount of pixels to scroll up
+        const scrollAmount = 300; // Amount of pixels to scroll up
         const profileContainer = document.querySelector('#title-pagination-header-text > div > div.profile.profile-slidein__profile > div.profile__main-container');
         if (profileContainer) {
             profileContainer.scrollBy(0, -scrollAmount);
@@ -49,39 +49,63 @@
         }
     }
 
-    // Keyboard event listener for handling key presses
-    document.addEventListener('keydown', function(e) {
-        // Check if the focus is on an input, textarea, or any element that is contenteditable
-        if (document.activeElement && (document.activeElement.tagName.toLowerCase() === 'input' || document.activeElement.tagName.toLowerCase() === 'textarea' || document.activeElement.isContentEditable)) {
-            return; // Do not execute hotkey actions if in an editable element
-        }
+    // Function to toggle "See More" and "See Less"
+    function toggleSeeMoreLess() {
+        const seeMoreButton = document.getElementById('line-clamp-show-more-button');
+        const seeLessButton = document.getElementById('line-clamp-show-less-button');
 
-        // Handle different key presses
-        switch (e.key) {
-            case 'a': // Navigate backwards
-                clickButton('a[rel="prev"]');
-                break;
-            case 's': // Navigate forwards
-                clickButton('a[rel="next"]');
-                break;
-            case 'd': // Save to pipeline
-                clickButton('.save-to-pipeline__button.save-to-pipeline__button--with-trigger');
-                break;
-            case 'f': // Hide/Unhide profile
-                clickHideButton();
-                break;
-            case ' ': // Send a message
-                e.preventDefault();
-                clickButton('button[data-live-test-component="message-icon-btn"]');
-                break;
-            case 'v': // Scroll down the profile
-                e.preventDefault();
-                scrollDownProfile();
-                break;
-            case 'c': // Scroll up the profile
-                e.preventDefault();
-                scrollUpProfile();
-                break;
+        if (seeMoreButton && window.getComputedStyle(seeMoreButton).display !== 'none') {
+            seeMoreButton.click();
+        } else if (seeLessButton && window.getComputedStyle(seeLessButton).display !== 'none') {
+            seeLessButton.click();
+        }
+    }
+
+
+// Keyboard event listener for handling key presses
+document.addEventListener('keydown', function(e) {
+    // Check if the focus is on an input, textarea, or any element that is contenteditable
+    if (document.activeElement && (document.activeElement.tagName.toLowerCase() === 'input' || document.activeElement.tagName.toLowerCase() === 'textarea' || document.activeElement.isContentEditable)) {
+        return; // Do not execute hotkey actions if in an editable element
+    }
+
+    // Handle different key presses
+    switch (e.key) {
+        case 'a': // Navigate backwards
+        case 'j': // Navigate backwards (right hand)
+            clickButton('a[rel="prev"]');
+            break;
+        case 's': // Navigate forwards
+        case 'k': // Navigate forwards (right hand)
+            clickButton('a[rel="next"]');
+            break;
+        case 'd': // Save to pipeline
+        case 'l': // Save to pipeline (right hand)
+            clickButton('.save-to-pipeline__button.save-to-pipeline__button--with-trigger');
+            break;
+        case 'f': // Hide/Unhide profile
+        case 'ö': // Hide/Unhide profile (right hand)
+            clickHideButton();
+            break;
+        case ' ': // Send a message
+            e.preventDefault();
+            clickButton('button[data-live-test-component="message-icon-btn"]');
+            break;
+        case 'v': // Scroll down the profile
+        case 'm': // Scroll down the profile (right hand)
+            e.preventDefault();
+            scrollDownProfile();
+            break;
+        case 'c': // Scroll up the profile
+        case 'n': // Scroll up the profile (right hand)
+            e.preventDefault();
+            scrollUpProfile();
+            break;
+        case 'g': // Toggle "See More" and "See Less"
+        case 'ä': // Toggle "See More" and "See Less" (right hand)
+            e.preventDefault();
+            toggleSeeMoreLess();
+            break;
         }
     });
 
