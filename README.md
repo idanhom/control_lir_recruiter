@@ -1,4 +1,6 @@
 # LinkedIn Recruiter Enhanced Navigation
+Todo:
+  make sure 'g' and 'ä' open up "skills" and "show more" from work experience (not education?)
 
 ## Description
 This Tampermonkey script enhances the user experience on LinkedIn Recruiter by enabling keyboard navigation and interaction with profiles. It allows users to navigate between profiles, save profiles to a pipeline, hide/unhide profiles, send messages, and toggle the "See More/Less" option in profiles, as well as scroll up and down within a profile view, all using designated keyboard shortcuts.
