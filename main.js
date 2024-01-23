@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LinkedIn Recruiter Enhanced Navigation
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  Use keyboard to navigate and interact with profiles in LinkedIn Recruiter
 // @author       Oscar
 // @grant        none
@@ -36,6 +36,15 @@
             profileContainer.scrollBy(0, -scrollAmount);
         }
     }
+
+function expandAllSkills() {
+    const skillButtonSelector = '.expandable-list__button[aria-label^="Show all"]';
+    const skillButton = document.querySelector(skillButtonSelector);
+
+    if (skillButton) {
+        skillButton.click();
+    }
+}
 
     // Specific function to toggle hide/unhide button
     function clickHideButton() {
@@ -105,6 +114,10 @@ document.addEventListener('keydown', function(e) {
         case 'ä': // Toggle "See More" and "See Less" (right hand)
             e.preventDefault();
             toggleSeeMoreLess();
+            break;
+        case 'r': // Expand all skills
+            e.preventDefault();
+            expandAllSkills();
             break;
         }
     });
