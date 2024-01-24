@@ -1,3 +1,10 @@
+todo:
+  kika så när jag inte har uppe själva "fönstret med kandidaten" utan det är mer överskådligt, kunna markera rätt element och styra att lägga till till pipe, gömma, öppna tidigare erfarenhet/utildning.
+  sedan scrolla till nästa, och då kunna göra samma sak.
+  när jag markerar dem, lägga en liten grå notering så det är tydligt att dessa är markerade.
+
+
+
 # LinkedIn Recruiter Enhanced Navigation
 Todo:
   make sure 'g' and 'ä' open up "skills" and "show more" from work experience (not education?)
