@@ -4,48 +4,50 @@ todo:
   när jag markerar dem, lägga en liten grå notering så det är tydligt att dessa är markerade.
 
 
-
-# LinkedIn Recruiter Enhanced Navigation
-Todo:
-  make sure 'g' and 'ä' open up "skills" and "show more" from work experience (not education?)
+# LinkedIn Recruiter Enhanced Navigation UserScript
 
 ## Description
-This Tampermonkey script enhances the user experience on LinkedIn Recruiter by enabling keyboard navigation and interaction with profiles. It allows users to navigate between profiles, save profiles to a pipeline, hide/unhide profiles, send messages, and toggle the "See More/Less" option in profiles, as well as scroll up and down within a profile view, all using designated keyboard shortcuts.
+
+This UserScript enhances the navigation and interaction experience on LinkedIn Recruiter. It allows users to use keyboard shortcuts for various actions such as navigating between profiles, expanding sections, scrolling through profiles, and more, thus streamlining the recruitment process.
 
 ## Features
-- **Navigate between profiles** using the keyboard.
-- **Save profiles to your pipeline**.
-- **Hide or unhide profiles**.
-- **Send messages** directly from the profile view.
-- **Toggle "See More" and "See Less"** in profile descriptions.
-- **Scroll up and down** within the profile container.
+
+- **Profile Navigation**: Navigate forwards and backwards between profiles.
+- **Profile Scrolling**: Scroll up and down within the profile view.
+- **Expand Skills**: Show all skills of a candidate with a single key press.
+- **Expand Work Experiences**: Reveal more work experiences of a candidate.
+- **Hide/Unhide Profiles**: Toggle the visibility of profiles.
+- **Toggle See More/Less**: Expand or collapse extended text sections.
+- **Message Candidates**: Quickly access the message button to communicate with candidates.
+- **Save to Pipeline**: Easily add candidates to your recruitment pipeline.
 
 ## Installation
-1. Install Tampermonkey on your browser.
-2. Open Tampermonkey's dashboard and click on the 'Create a new script' button.
-3. Copy and paste the provided script into the script editor.
-4. Save the script and ensure it's enabled in the Tampermonkey dashboard.
+
+1. Install a UserScript manager extension in your browser, such as Tampermonkey or Greasemonkey.
+2. Create a new script in the UserScript manager.
+3. Copy and paste the entire code of this script into the new script section in the UserScript manager.
+4. Save the script.
 
 ## Usage
-Once installed, the script activates on the LinkedIn Recruiter pages. Use the following keyboard shortcuts for navigation:
+
+Once the script is installed and active, navigate to LinkedIn Recruiter. The script will automatically run on the LinkedIn Recruiter pages (`https://www.linkedin.com/talent/hire/*`). Use the following keyboard shortcuts to interact with the page:
 
 - `a` or `j`: Navigate to the previous profile.
 - `s` or `k`: Navigate to the next profile.
 - `d` or `l`: Save the current profile to the pipeline.
-- `f` or `ö`: Hide/Unhide the current profile.
-- `Spacebar`: Send a message.
+- `f` or `ö`: Hide or unhide the current profile.
+- `Spacebar`: Send a message to the candidate.
 - `v` or `m`: Scroll down the profile.
 - `c` or `n`: Scroll up the profile.
-- `g` or `ä`: Toggle "See More" and "See Less" in the profile description.
+- `g` or `ä`: Toggle "See More" and "See Less" in text sections.
+- `r`: Expand all skills and show more work experiences.
 
-## Compatibility
-This script is designed for use with LinkedIn Recruiter and has been tested with specific browser versions (e.g., Chrome 90, Firefox 88). Ensure your browser is compatible with Tampermonkey.
+## Notes
 
-## Contribution
-Suggestions and contributions are welcome. Please feel free to fork, modify, and make pull requests or report issues.
+- The script will not activate if the focus is on an input, textarea, or any element that is contenteditable.
+- LinkedIn's website structure can change, which might affect the functionality of this script. If LinkedIn updates its site, the script may require adjustments.
 
 ## License
-[Specify the license under which this script is released, e.g., MIT, GPL, etc.]
 
-## Disclaimer
 This script is provided "as is", without warranty of any kind. Use at your own risk.
+
