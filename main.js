@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         LinkedIn Recruiter Enhanced Navigation
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1..8
 // @description  Use keyboard to navigate and interact with profiles in LinkedIn Recruiter
 // @author       Oscar
 // @grant        none
@@ -17,6 +17,11 @@
         if (button) {
             button.click();
         }
+    }
+
+    // Function to navigate forwards
+    function navigateForwards() {
+        clickButton('a[rel="next"]');
     }
 
     // Function to scroll down the profile container by a fixed amount
@@ -95,7 +100,7 @@
                 break;
             case 's': // Navigate forwards
             case 'k': // Navigate forwards (right hand)
-                clickButton('a[rel="next"]');
+                navigateForwards();
                 break;
             case 'd': // Save to pipeline
             case 'l': // Save to pipeline (right hand)
@@ -127,8 +132,18 @@
             case 'r': // Expand all skills and work experiences
                 e.preventDefault();
                 expandAllSkills();
+                break;
+            case 'e': // Expand work experiences
+                e.preventDefault();
                 expandWorkExperiences();
                 break;
+        }
+    });
+
+    // Mouse event listener for handling mouse button presses
+    document.addEventListener('mouseup', function(e) {
+        if (e.button === 4) { // Mouse button 5
+            navigateForwards();
         }
     });
 
