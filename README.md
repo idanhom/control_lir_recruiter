@@ -31,7 +31,7 @@ This UserScript is designed to enhance the user experience on LinkedIn Recruiter
 Navigate to LinkedIn Recruiter (`https://www.linkedin.com/talent/hire/*`). The script will run automatically. Use the designated keyboard shortcuts to interact with the page:
 
 - `a` or `j`: Navigate to the previous profile.
-- `s` or `k`: Navigate to the next profile.
+- `s` or `k` or `Mouse Button 5': Navigate to the next profile.
 - `d` or `l`: Save the current profile to the pipeline.
 - `f` or `ö`: Hide or unhide the current profile.
 - `Spacebar`: Send a message to the candidate.
