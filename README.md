@@ -4,10 +4,6 @@
 
 This UserScript is designed to enhance the user experience on LinkedIn Recruiter by enabling keyboard navigation and interaction. It provides a more efficient way to navigate profiles, expand sections, and perform common actions without relying on the mouse.
 
-## Version
-
-1.7
-
 ## Features
 
 - **Profile Navigation**: Navigate forwards (`s`, `k`) and backwards (`a`, `j`) between profiles.
